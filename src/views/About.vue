@@ -96,15 +96,15 @@
 
 <script setup>
 const experience = [
-  {
-    title: "Senior Web Developer",
-    date: "2020 - Present",
-    description:
-      "Leading development teams and creating innovative web solutions",
-  },
+  // {
+  //   title: "Senior Web Developer",
+  //   date: "2020 - Present",
+  //   description:
+  //     "Leading development teams and creating innovative web solutions",
+  // },
   {
     title: "Web Developer",
-    date: "2023 - 2024",
+    date: "2023 - Present",
     description: "Developing and maintaining client websites and applications",
   },
   {

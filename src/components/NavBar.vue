@@ -48,6 +48,8 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
+defineProps(['closeMenu'])
+
 const closeMenu = () => {
   isMenuOpen.value = false;
 };
@@ -92,6 +94,8 @@ li {
   padding: 8px;
   font-size: 15px;
 }
+
+
 
 header {
   display: flex;
