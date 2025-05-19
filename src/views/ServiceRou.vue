@@ -67,7 +67,7 @@
 <script>
 import ServeImg from "../assets/workPic-1.jpg";
 import ServeImg1 from "../assets/workPic-4.jpg";
-import ServeImg2 from "../assets/workpic-3.jpg";
+import ServeImg2 from "../assets/workPic-3.jpg";
 // import server from "../assets/qrcode.png";
 // import { ref } from "vue";
 export default {
