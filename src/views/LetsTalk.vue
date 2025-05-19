@@ -20,10 +20,37 @@
           </div>
         </div>
 
-        <div class="social-links">
-          <a href="#" class="social-link">LinkedIn</a>
-          <a href="#" class="social-link">GitHub</a>
-          <a href="#" class="social-link">Twitter</a>
+        <div class="social-links-grid">
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            <span>INSTAGRAM</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>TWITTER</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+            <span>FACEBOOK</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-behance"></i>
+            <span>BEHANCE</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LINKEDLN</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="social-btn" href="#" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <span>GITHUB</span>
+            <span class="arrow">→</span>
+          </a>
         </div>
       </div>
 
@@ -123,26 +150,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.social-link {
-  color: #edd6b6;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #edd6b6;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  background-color: #edd6b6;
-  color: #0e0e0e;
-}
-
 .contact-form {
   background: rgba(14, 14, 14, 0.5);
   border: 1px solid rgba(225, 225, 225, 0.18);
@@ -190,9 +197,88 @@ textarea {
   color: #0e0e0e;
 }
 
+.social-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0 2rem 0;
+  background: transparent;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  background: #0e0d0c;
+  border: 1.5px solid rgba(225, 225, 225, 0.18);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  color: #edd6b6;
+  font-family: "Satoshi", "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn span:not(.arrow) {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.social-btn i {
+  font-size: 1.4rem;
+  color: #edd6b6;
+  min-width: 1.4rem;
+}
+
+.social-btn .arrow {
+  margin-left: auto;
+  font-size: 1.3rem;
+  color: #edd6b6;
+  transition: transform 0.2s;
+}
+
+.social-btn:hover,
+.social-btn:focus {
+  background: #181715;
+  border-color: #c2a97b;
+  box-shadow: 0 2px 16px 0 rgba(237, 214, 182, 0.08);
+}
+
+.social-btn:hover .arrow,
+.social-btn:focus .arrow {
+  transform: translateX(6px);
+}
+
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .social-links-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .social-links-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  .social-btn {
+    font-size: 1rem;
+    padding: 1rem 1.1rem;
   }
 }
 </style>
